@@ -1,4 +1,4 @@
 # Summary
 
-* [Introduction](README.md)
-
+*	[前言](README.md)
+*	[生成函数](generator-function.md)
