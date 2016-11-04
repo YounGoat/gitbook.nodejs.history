@@ -4,6 +4,11 @@ Generator Function 是从 4.x 版本开始引入的，当时必须开启 ```--ha
 
 ##	ERROR: Generator is already running
 
+与之关联的另一种报错是：
+```
+TypeError: Iterator result undefined is not an object
+```
+
 ###	问题解读
 这是 v6.9.1 版本在和谐模式下运行时出现的一个现象。来看源代码
 
@@ -54,8 +59,16 @@ node --harmony foo.js
 ```
 
 可以看到，差异有二：
-*	```next()``` 方法没有返回值；
-*	溢出执行 ```next()``` 方法会导出错误。
+*	```next()``` 方法没有返回值；  
+	生成函数常与 ```co()``` 模块配合使用（本例中没有体现），此时就会出现报错：
+	```
+	TypeError: Iterator result undefined is not an object
+	```
+
+*	溢出执行 ```next()``` 方法会导出错误，即：
+	```
+	Generator is already running
+	```
 
 对于借助生成函数编写同步风格程序的设计来说，这种差异具有相当的破坏性。
 
