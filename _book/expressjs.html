@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>前言 · GitBook</title>
+        <title>express · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -57,8 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="generator-function.html" />
     
+    <link rel="prev" href="install.html" />
     
 
     </head>
@@ -87,7 +87,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -140,7 +140,7 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="expressjs.html">
+        <li class="chapter active" data-level="3.1" data-path="expressjs.html">
             
                 <a href="expressjs.html">
             
@@ -183,7 +183,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >前言</a>
+        <a href="." >express</a>
     </h1>
 </div>
 
@@ -198,8 +198,35 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x524D;&#x8A00;">&#x524D;&#x8A00;</h1>
-<p>Node.js &#x5728;&#x5386;&#x53F2;&#x4E0A;&#x7ECF;&#x5386;&#x4E86;&#x5206;&#x5206;&#x5408;&#x5408;&#xFF0C;&#x81EA;&#x4ECE; node.js &#x4E0E; io.js &#x5408;&#x6D41;&#x4E4B;&#x540E;&#xFF0C;&#x7248;&#x672C;&#x66F4;&#x8FED;&#x660E;&#x663E;&#x52A0;&#x901F;&#xFF0C;&#x5BF9; ES6/2015 &#x751A;&#x81F3; ES7 &#x7684;&#x652F;&#x6301;&#x529B;&#x5EA6;&#x4E0D;&#x65AD;&#x6500;&#x5347;&#xFF0C;&#x559C;&#x6B22;&#x730E;&#x5947;&#x7684;&#x65B0;&#x9510;&#x7A0B;&#x5E8F;&#x5458;&#x5927;&#x547C;&#x8FC7;&#x763E;&#xFF0C;&#x4F46;&#x662F;&#x7248;&#x672C;&#x5411;&#x4E0B;&#x517C;&#x5BB9;&#x7684;&#x539F;&#x5219;&#x4E5F;&#x968F;&#x4E4B;&#x53D7;&#x5230;&#x6311;&#x6218;&#x3002;&#x672C;&#x4E66;&#x5C06;&#x91CD;&#x70B9;&#x653E;&#x5728; Node.js &#x7684;&#x7248;&#x672C;&#x517C;&#x5BB9;&#x6027;&#x95EE;&#x9898;&#x4E0A;&#xFF0C;&#x5E0C;&#x671B;&#x80FD;&#x591F;&#x4E3A;&#x58A8;&#x5B88;&#x6210;&#x89C4;&#x7684;&#x8001;&#x7A0B;&#x5E8F;&#x5458;&#x4EEC;&#x6292;&#x56F0;&#x89E3;&#x60D1;&#x3002;</p>
+                                <h1 id="express">Express</h1>
+<blockquote>
+<p>   Fast, unopinionated, minimalist web framework for Node.js<br>   &#x5F15;&#x81EA; <a href="http://expressjs.com" target="_blank">Express &#x5B98;&#x65B9;&#x7F51;&#x7AD9;</a></p>
+</blockquote>
+<p>Java? Tomcat!<br>PHP? Apache!<br>.Net? IIS!<br>Node.js? Yum ... Express?</p>
+<p>&#x6BCF;&#x4E00;&#x79CD;&#x4E3B;&#x6D41;&#x7684; web &#x5F00;&#x53D1;&#x8BED;&#x8A00;&#xFF0C;&#x90FD;&#x6709;&#x5EA6;&#x8EAB;&#x5B9A;&#x5236;&#x7684;&#x5E94;&#x7528;&#x5BB9;&#x5668;&#x3002;&#x7136;&#x800C;&#xFF0C;Node.js &#x53D1;&#x5C55;&#x81F3; 7.0&#xFF0C;&#x5374;&#x4F9D;&#x65E7;&#x5B51;&#x7136;&#x4E00;&#x8EAB;&#x3002;&#x5E78;&#x597D;&#xFF0C;&#x5B83;&#x8FD8;&#x6709; Express&#x3002;</p>
+<h2 id="&#x5728;&#x7EBF;&#x8D44;&#x6E90;">&#x5728;&#x7EBF;&#x8D44;&#x6E90;</h2>
+<ul>
+<li><a href="http://expressjs.com" target="_blank">Express &#x5B98;&#x65B9;&#x7F51;&#x7AD9;&#xFF0C;http://expressjs.com</a></li>
+</ul>
+<h2 id="&#x4ECE;-express-generator-&#x5F00;&#x59CB;">&#x4ECE; Express Generator &#x5F00;&#x59CB;</h2>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5B89;&#x88C5;&#x521D;&#x59CB;&#x5316;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;</span>
+npm install express-generator
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x547D;&#x4EE4;&#x5E2E;&#x52A9;</span>
+express -h
+<span class="hljs-comment"># &#x6CE8;&#x610F;&#xFF1A;&#x8FD9;&#x91CC;&#x751F;&#x6210;&#x7684; express &#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;&#x521D;&#x59CB;&#x5316;&#x57FA;&#x4E8E; Express &#x6846;&#x67B6;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x4F46;&#x5B83;&#x4E0D;&#x662F;&#x6846;&#x67B6;&#x672C;&#x8EAB;&#x3002;</span>
+
+<span class="hljs-comment"># &#x521B;&#x5EFA;&#xFF08;&#x5982;&#x4E0D;&#x5B58;&#x5728;&#xFF09;&#x5E76;&#x521D;&#x59CB;&#x5316;&#x5E94;&#x7528;&#x76EE;&#x5F55;</span>
+express myExpressApp
+
+<span class="hljs-comment"># &#x5207;&#x6362;&#x5230;&#x5E94;&#x7528;&#x76EE;&#x5F55;</span>
+<span class="hljs-built_in">cd</span> myExpressApp
+<span class="hljs-comment"># &#x4EE5;&#x8C03;&#x8BD5;&#x6A21;&#x5F0F;&#x542F;&#x52A8;&#x5E94;&#x7528;</span>
+PORT=8080 DEBUG=1 ./bin/www
+<span class="hljs-comment"># &#x6216;&#xFF0C;&#x76F4;&#x63A5;&#x542F;&#x52A8;</span>
+npm start
+</code></pre>
+<p>&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#x542F;&#x52A8;&#x7AEF;&#x53E3;&#xFF0C;&#x901A;&#x8FC7; Express Generator &#x521B;&#x5EFA;&#x7684;&#x5E94;&#x7528;&#x7684;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;&#x4E3A; 3000&#xFF1A;<br><img src="expressjs.img/localhost3000.png" alt="localhost3000"></p>
 
                                 
                                 </section>
@@ -227,10 +254,10 @@
 
             
                 
-                
-                <a href="generator-function.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 生成函数">
-                    <i class="fa fa-angle-right"></i>
+                <a href="install.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 安装和卸载">
+                    <i class="fa fa-angle-left"></i>
                 </a>
+                
                 
             
         
@@ -239,7 +266,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"前言","level":"1.1","depth":1,"next":{"title":"生成函数","level":"2.1","depth":1,"path":"generator-function.md","ref":"generator-function.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2016-11-03T08:40:43.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-11-07T03:06:37.284Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"express","level":"3.1","depth":1,"previous":{"title":"安装和卸载","level":"2.2","depth":1,"path":"install.md","ref":"install.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"expressjs.md","mtime":"2016-11-07T04:24:48.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-11-07T03:06:37.284Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
