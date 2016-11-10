@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>express · GitBook</title>
+        <title>pm2 · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="pm2.html" />
     
-    
-    <link rel="prev" href="install.html" />
+    <link rel="prev" href="expressjs.html" />
     
 
     </head>
@@ -142,7 +140,7 @@
         
         
     
-        <li class="chapter active" data-level="3.1" data-path="expressjs.html">
+        <li class="chapter " data-level="3.1" data-path="expressjs.html">
             
                 <a href="expressjs.html">
             
@@ -162,7 +160,7 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="pm2.html">
+        <li class="chapter active" data-level="4.1" data-path="pm2.html">
             
                 <a href="pm2.html">
             
@@ -205,7 +203,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >express</a>
+        <a href="." >pm2</a>
     </h1>
 </div>
 
@@ -220,35 +218,22 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="express">Express</h1>
-<blockquote>
-<p>   Fast, unopinionated, minimalist web framework for Node.js<br>   &#x5F15;&#x81EA; <a href="http://expressjs.com" target="_blank">Express &#x5B98;&#x65B9;&#x7F51;&#x7AD9;</a></p>
-</blockquote>
-<p>Java? Tomcat!<br>PHP? Apache!<br>.Net? IIS!<br>Node.js? Yum ... Express?</p>
-<p>&#x6BCF;&#x4E00;&#x79CD;&#x4E3B;&#x6D41;&#x7684; web &#x5F00;&#x53D1;&#x8BED;&#x8A00;&#xFF0C;&#x90FD;&#x6709;&#x5EA6;&#x8EAB;&#x5B9A;&#x5236;&#x7684;&#x5E94;&#x7528;&#x5BB9;&#x5668;&#x3002;&#x7136;&#x800C;&#xFF0C;Node.js &#x53D1;&#x5C55;&#x81F3; 7.0&#xFF0C;&#x5374;&#x4F9D;&#x65E7;&#x5B51;&#x7136;&#x4E00;&#x8EAB;&#x3002;&#x5E78;&#x597D;&#xFF0C;&#x5B83;&#x8FD8;&#x6709; Express&#x3002;</p>
+                                <h1 id="pm2-process-manager-2">PM2, P(rocess) M(anager) 2</h1>
 <h2 id="&#x5728;&#x7EBF;&#x8D44;&#x6E90;">&#x5728;&#x7EBF;&#x8D44;&#x6E90;</h2>
 <ul>
-<li><a href="http://expressjs.com" target="_blank">Express &#x5B98;&#x65B9;&#x7F51;&#x7AD9;&#xFF0C;http://expressjs.com</a></li>
+<li>&#x5B98;&#x65B9;&#x4E3B;&#x9875;<br><a href="https://github.com/Unitech/pm2" target="_blank">https://github.com/Unitech/pm2</a></li>
 </ul>
-<h2 id="&#x4ECE;-express-generator-&#x5F00;&#x59CB;">&#x4ECE; Express Generator &#x5F00;&#x59CB;</h2>
-<pre><code class="lang-bash"><span class="hljs-comment"># &#x5B89;&#x88C5;&#x521D;&#x59CB;&#x5316;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;</span>
-npm install express-generator
+<h2 id="faq">FAQ</h2>
+<ul>
+<li><p>&#x600E;&#x6837;&#x6E05;&#x7A7A;&#x91CD;&#x542F;&#x8BB0;&#x5F55;&#xFF08;restart&#xFF09;&#xFF1F;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x91CD;&#x7F6E;&#x6240;&#x6709;&#x8FDB;&#x7A0B;</span>
+pm2 reset all
 
-<span class="hljs-comment"># &#x67E5;&#x770B;&#x547D;&#x4EE4;&#x5E2E;&#x52A9;</span>
-express -h
-<span class="hljs-comment"># &#x6CE8;&#x610F;&#xFF1A;&#x8FD9;&#x91CC;&#x751F;&#x6210;&#x7684; express &#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;&#x521D;&#x59CB;&#x5316;&#x57FA;&#x4E8E; Express &#x6846;&#x67B6;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x4F46;&#x5B83;&#x4E0D;&#x662F;&#x6846;&#x67B6;&#x672C;&#x8EAB;&#x3002;</span>
-
-<span class="hljs-comment"># &#x521B;&#x5EFA;&#xFF08;&#x5982;&#x4E0D;&#x5B58;&#x5728;&#xFF09;&#x5E76;&#x521D;&#x59CB;&#x5316;&#x5E94;&#x7528;&#x76EE;&#x5F55;</span>
-express myExpressApp
-
-<span class="hljs-comment"># &#x5207;&#x6362;&#x5230;&#x5E94;&#x7528;&#x76EE;&#x5F55;</span>
-<span class="hljs-built_in">cd</span> myExpressApp
-<span class="hljs-comment"># &#x4EE5;&#x8C03;&#x8BD5;&#x6A21;&#x5F0F;&#x542F;&#x52A8;&#x5E94;&#x7528;</span>
-PORT=8080 DEBUG=1 ./bin/www
-<span class="hljs-comment"># &#x6216;&#xFF0C;&#x76F4;&#x63A5;&#x542F;&#x52A8;</span>
-npm start
+<span class="hljs-comment"># &#x91CD;&#x7F6E;&#x6307;&#x5B9A;&#x8FDB;&#x7A0B;</span>
+pm2 reset 0
 </code></pre>
-<p>&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#x542F;&#x52A8;&#x7AEF;&#x53E3;&#xFF0C;&#x901A;&#x8FC7; Express Generator &#x521B;&#x5EFA;&#x7684;&#x5E94;&#x7528;&#x7684;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;&#x4E3A; 3000&#xFF1A;<br><img src="expressjs.img/localhost3000.png" alt="localhost3000"></p>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -276,14 +261,10 @@ npm start
 
             
                 
-                <a href="install.html" class="navigation navigation-prev " aria-label="Previous page: 安装和卸载">
+                <a href="expressjs.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: express">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="pm2.html" class="navigation navigation-next " aria-label="Next page: pm2">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -292,7 +273,7 @@ npm start
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"express","level":"3.1","depth":1,"next":{"title":"pm2","level":"4.1","depth":1,"path":"pm2.md","ref":"pm2.md","articles":[]},"previous":{"title":"安装和卸载","level":"2.2","depth":1,"path":"install.md","ref":"install.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"expressjs.md","mtime":"2016-11-10T07:25:41.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-11-10T07:42:04.468Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"pm2","level":"4.1","depth":1,"previous":{"title":"express","level":"3.1","depth":1,"path":"expressjs.md","ref":"expressjs.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pm2.md","mtime":"2016-11-10T07:50:07.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-11-10T07:42:04.468Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

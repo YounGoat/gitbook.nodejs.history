@@ -6,5 +6,8 @@
 *	[生成函数](generator-function.md)
 *	[安装和卸载](install.md)
 
-#	模块篇
+#	模块·框架篇
 *	[express](expressjs.md)
+
+#	模块·工具篇]
+*	[pm2](pm2.md)
