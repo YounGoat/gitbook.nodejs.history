@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="pm2.html" />
+    <link rel="next" href="clis.html" />
     
     
-    <link rel="prev" href="json-schema.html" />
+    <link rel="prev" href="frameworks.html" />
     
 
     </head>
@@ -162,7 +162,20 @@
         
         
     
-        <li class="chapter active" data-level="4.1" data-path="expressjs.html">
+        <li class="chapter " data-level="4.1" data-path="frameworks.html">
+            
+                <a href="frameworks.html">
+            
+                    
+                    PACKAGE·框架篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.2" data-path="expressjs.html">
             
                 <a href="expressjs.html">
             
@@ -182,7 +195,20 @@
         
         
     
-        <li class="chapter " data-level="5.1" data-path="pm2.html">
+        <li class="chapter " data-level="5.1" data-path="clis.html">
+            
+                <a href="clis.html">
+            
+                    
+                    PACKAGE·命令篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="pm2.html">
             
                 <a href="pm2.html">
             
@@ -202,12 +228,104 @@
         
         
     
-        <li class="chapter " data-level="6.1" data-path="ajv.html">
+        <li class="chapter " data-level="6.1" data-path="components.html">
+            
+                <a href="components.html">
+            
+                    
+                    PACKAGE·组件篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="utilities.html">
+            
+                <a href="utilities.html">
+            
+                    
+                    PACKAGE·功能篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="ajv.html">
             
                 <a href="ajv.html">
             
                     
                     ajv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="glob,minimatch.html">
+            
+                <a href="glob,minimatch.html">
+            
+                    
+                    glob, minimatch
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="subject.html">
+            
+                <a href="subject.html">
+            
+                    
+                    专题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="http-server.html">
+            
+                <a href="http-server.html">
+            
+                    
+                    HTTP Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="http-post.html">
+            
+                <a href="http-post.html">
+            
+                    
+                    HTTP POST
             
                 </a>
             
@@ -260,17 +378,17 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="express">Express</h1>
+                                <h1 id="express">express</h1>
 <blockquote>
 <p>   Fast, unopinionated, minimalist web framework for Node.js<br>   &#x5F15;&#x81EA; <a href="http://expressjs.com" target="_blank">Express &#x5B98;&#x65B9;&#x7F51;&#x7AD9;</a></p>
 </blockquote>
-<p>Java? Tomcat!<br>PHP? Apache!<br>.Net? IIS!<br>Node.js? Yum ... Express?</p>
-<p>&#x6BCF;&#x4E00;&#x79CD;&#x4E3B;&#x6D41;&#x7684; web &#x5F00;&#x53D1;&#x8BED;&#x8A00;&#xFF0C;&#x90FD;&#x6709;&#x5EA6;&#x8EAB;&#x5B9A;&#x5236;&#x7684;&#x5E94;&#x7528;&#x5BB9;&#x5668;&#x3002;&#x7136;&#x800C;&#xFF0C;Node.js &#x53D1;&#x5C55;&#x81F3; 7.0&#xFF0C;&#x5374;&#x4F9D;&#x65E7;&#x5B51;&#x7136;&#x4E00;&#x8EAB;&#x3002;&#x5E78;&#x597D;&#xFF0C;&#x5B83;&#x8FD8;&#x6709; Express&#x3002;</p>
+<p>Java? Tomcat!<br>PHP? Apache!<br>.Net? IIS!<br>Node.js? Yum ... express?</p>
+<p>&#x6BCF;&#x4E00;&#x79CD;&#x4E3B;&#x6D41;&#x7684; web &#x5F00;&#x53D1;&#x8BED;&#x8A00;&#xFF0C;&#x90FD;&#x6709;&#x5EA6;&#x8EAB;&#x5B9A;&#x5236;&#x7684;&#x5E94;&#x7528;&#x5BB9;&#x5668;&#x3002;&#x7136;&#x800C;&#xFF0C;Node.js &#x53D1;&#x5C55;&#x81F3; 7.0&#xFF0C;&#x5374;&#x4F9D;&#x65E7;&#x5B51;&#x7136;&#x4E00;&#x8EAB;&#x3002;&#x5E78;&#x597D;&#xFF0C;&#x5B83;&#x8FD8;&#x6709; express&#x3002;<strong>&#x6CE8;&#x610F;&#xFF1A;express &#x2260; Express&#xFF01;</strong></p>
 <h2 id="&#x5728;&#x7EBF;&#x8D44;&#x6E90;">&#x5728;&#x7EBF;&#x8D44;&#x6E90;</h2>
 <ul>
-<li><a href="http://expressjs.com" target="_blank">Express &#x5B98;&#x65B9;&#x7F51;&#x7AD9;&#xFF0C;http://expressjs.com</a></li>
+<li><a href="http://expressjs.com" target="_blank">express &#x5B98;&#x65B9;&#x7F51;&#x7AD9;&#xFF0C;http://expressjs.com</a></li>
 </ul>
-<h2 id="&#x4ECE;-express-generator-&#x5F00;&#x59CB;">&#x4ECE; Express Generator &#x5F00;&#x59CB;</h2>
+<h2 id="&#x4ECE;-express-generator-&#x5F00;&#x59CB;">&#x4ECE; express Generator &#x5F00;&#x59CB;</h2>
 <pre><code class="lang-bash"><span class="hljs-comment"># &#x5B89;&#x88C5;&#x521D;&#x59CB;&#x5316;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;</span>
 npm install express-generator
 
@@ -288,7 +406,7 @@ PORT=8080 DEBUG=1 ./bin/www
 <span class="hljs-comment"># &#x6216;&#xFF0C;&#x76F4;&#x63A5;&#x542F;&#x52A8;</span>
 npm start
 </code></pre>
-<p>&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#x542F;&#x52A8;&#x7AEF;&#x53E3;&#xFF0C;&#x901A;&#x8FC7; Express Generator &#x521B;&#x5EFA;&#x7684;&#x5E94;&#x7528;&#x7684;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;&#x4E3A; 3000&#xFF1A;<br><img src="expressjs.img/localhost3000.png" alt="localhost3000"></p>
+<p>&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#x542F;&#x52A8;&#x7AEF;&#x53E3;&#xFF0C;&#x901A;&#x8FC7; express Generator &#x521B;&#x5EFA;&#x7684;&#x5E94;&#x7528;&#x7684;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;&#x4E3A; 3000&#xFF1A;<br><img src="expressjs.img/localhost3000.png" alt="localhost3000"></p>
 
                                 
                                 </section>
@@ -316,12 +434,12 @@ npm start
 
             
                 
-                <a href="json-schema.html" class="navigation navigation-prev " aria-label="Previous page: JSON Schema">
+                <a href="frameworks.html" class="navigation navigation-prev " aria-label="Previous page: PACKAGE·框架篇">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="pm2.html" class="navigation navigation-next " aria-label="Next page: pm2">
+                <a href="clis.html" class="navigation navigation-next " aria-label="Next page: PACKAGE·命令篇">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -332,7 +450,7 @@ npm start
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"express","level":"4.1","depth":1,"next":{"title":"pm2","level":"5.1","depth":1,"path":"pm2.md","ref":"pm2.md","articles":[]},"previous":{"title":"JSON Schema","level":"3.1","depth":1,"path":"json-schema.md","ref":"json-schema.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"expressjs.md","mtime":"2016-11-10T07:25:41.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-11-11T10:11:02.612Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"express","level":"4.2","depth":1,"next":{"title":"PACKAGE·命令篇","level":"5.1","depth":1,"path":"clis.md","ref":"clis.md","articles":[]},"previous":{"title":"PACKAGE·框架篇","level":"4.1","depth":1,"path":"frameworks.md","ref":"frameworks.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"expressjs.md","mtime":"2016-11-23T10:36:28.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-11-23T10:22:27.631Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
