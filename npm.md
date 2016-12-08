@@ -13,3 +13,5 @@
 
 *	*NODE.JS MODULES*  
 	https://nodejsmodules.org
+
+##	模块内置脚本

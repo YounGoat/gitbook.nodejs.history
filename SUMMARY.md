@@ -6,6 +6,7 @@
 *	[生成函数](generator-function.md)
 *	[安装和卸载](install.md)
 *	[NPM](npm.md)
+	*	[scripts](npm.scripts.md)
 
 #	JavaScript
 *	[JSON Schema](json-schema.md)
