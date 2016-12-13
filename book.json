@@ -1,0 +1,13 @@
+{
+	"title": "A Brief History Of Node.js",
+	"variables": {},
+	"links": {
+		"sidebar": {
+			"HOME": "https://youngoat.github.io"
+		}
+	},
+	"plugins": [
+		"multipart",
+		"toggle-chapters"
+	]
+}
